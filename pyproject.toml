@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.backends.legacy:build"
+
+[project]
+name = "verifiable-rag-chatbot"
+version = "1.0.0"
+description = "Grounded retrieval-augmented generation engine with verifiable exact passage citations and SHA256 integrity"
+license = {text = "MIT"}
+requires-python = ">=3.10"
+dependencies = ["pydantic>=2.0"]
+
+[project.scripts]
+rag = "src.cli:main"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
